@@ -24,6 +24,9 @@ Patch1: fakechroot-cmd-subst.patch
 # a new version of automake is released. - RWMJ.
 Patch2: fakechroot-no-automake-version.patch
 
+# Add aarch64 support to autoconf scripts.
+Patch3: fakechroot-2.9-aarch64.patch
+
 %description
 fakechroot runs a command in an environment were is additionally
 possible to use the chroot(8) call without root privileges. This is
@@ -44,6 +47,7 @@ This package contains the libraries required by %{name}.
 %patch0 -p0
 %patch1 -p0
 %patch2 -p1
+%patch3 -p1
 
 # Patch0 updates autoconf, so rerun this:
 ./autogen.sh

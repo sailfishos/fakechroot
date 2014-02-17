@@ -1,2 +1,5 @@
+* Mon Feb 17 2014 Oleg Girko <oleg.girko@jolla.com> - 2.9-2
+- Add aarch64 support
+
 * Wed May 15 2013 Reto Zingg <reto.zingg@jollamobile.com> - 2.9-1
 - initial import from Fedora
