@@ -1,3 +1,7 @@
+* Sat Oct 04 2025 Matti Lehtimäki <matti.lehtimaki@jolla.com> - 2.9-3
+- Use %autosetup instead of %patchN. JB#63645
+- Fix build with gcc 15. JB#63045
+
 * Mon Feb 17 2014 Oleg Girko <oleg.girko@jolla.com> - 2.9-2
 - Add aarch64 support
 
