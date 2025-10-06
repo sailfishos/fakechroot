@@ -1,0 +1,26 @@
+diff -aur a/src/libfakechroot.c b/src/libfakechroot.c
+--- a/src/libfakechroot.c	2009-03-31 13:20:41.000000000 +0300
++++ b/src/libfakechroot.c	2025-10-04 01:19:45.574736579 +0300
+@@ -66,6 +66,22 @@
+ #include <sys/xattr.h>
+ #endif
+ 
++#ifndef _STAT_VER
++ #if defined (__aarch64__)
++  #define _STAT_VER 0
++ #elif defined (__powerpc__) && __WORDSIZE == 64
++  #define _STAT_VER 1
++ #elif defined (__riscv) && __riscv_xlen==64
++  #define _STAT_VER 0
++ #elif defined (__s390x__)
++  #define _STAT_VER 1
++ #elif defined (__x86_64__)
++  #define _STAT_VER 1
++ #else
++  #define _STAT_VER 3
++ #endif
++#endif
++
+ #if defined(PATH_MAX)
+ #define FAKECHROOT_MAXPATH PATH_MAX
+ #elif defined(_POSIX_PATH_MAX)

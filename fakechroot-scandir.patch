@@ -1,7 +1,7 @@
 Index: m4/scandir_argtypes.m4
 ===================================================================
---- m4/scandir_argtypes.m4	(revision 334)
-+++ m4/scandir_argtypes.m4	(working copy)
+--- a/m4/scandir_argtypes.m4	(revision 334)
++++ b/m4/scandir_argtypes.m4	(working copy)
 @@ -12,7 +12,7 @@
   for ac_arg1 in 'const char *dir'; do
    for ac_arg2 in 'struct dirent ***namelist'; do
@@ -66,8 +66,8 @@ Index: m4/scandir_argtypes.m4
 +])
 Index: src/libfakechroot.c
 ===================================================================
---- src/libfakechroot.c	(revision 334)
-+++ src/libfakechroot.c	(working copy)
+--- a/src/libfakechroot.c	(revision 334)
++++ b/src/libfakechroot.c	(working copy)
 @@ -512,10 +512,10 @@
  #endif
  static int     (*next_rmdir) (const char *pathname) = NULL;
@@ -101,8 +101,8 @@ Index: src/libfakechroot.c
      expand_chroot_path(dir, fakechroot_path, fakechroot_ptr, fakechroot_buf);
 Index: configure.ac
 ===================================================================
---- configure.ac	(revision 334)
-+++ configure.ac	(working copy)
+--- a/configure.ac	(revision 334)
++++ b/configure.ac	(working copy)
 @@ -177,6 +177,7 @@
  
  AC_FUNC_READLINK_ARGTYPES
